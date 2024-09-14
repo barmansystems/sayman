@@ -77,7 +77,7 @@ class SendMessage extends Notification
 
             $token = $credential->fetchAuthToken(\Google\Auth\HttpHandler\HttpHandlerFactory::build());
 
-            $ch = curl_init("https://fcm.googleapis.com/v1/projects/parso-462c2/messages:send");
+            $ch = curl_init("https://fcm.googleapis.com/v1/projects/sayman-767c3/messages:send");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_HTTPHEADER, [
                 'Content-Type: application/json',
@@ -91,7 +91,7 @@ class SendMessage extends Notification
                         "notification" => [
                             "title" => "",
                             "body" => $message,
-                            "icon" => asset('assets/images/logo-sm.png')
+                            "icon" =>'https://sayman.moshrefiholding.com/assets/images/img/sayman-logo-blue-sm.png'
                         ],
                     ]
                 ]
